@@ -1,0 +1,11 @@
+@import '~styles/styles.defaults';
+
+.ps-cart-store-summary {
+    .store-name {
+        width: calc(100% - 70px);
+    }
+
+    .charge {
+        color: map-get($brand-status-colors, danger);
+    }
+}

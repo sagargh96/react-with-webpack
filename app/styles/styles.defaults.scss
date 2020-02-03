@@ -1,0 +1,92 @@
+// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
+
+@import "~foundation-sites/scss/util/unit";
+
+$brand-color: #43b02a;
+$brand-neutral-colors: (#0a64a0, #43b02a, #501eb4, #49516f);
+$brand-accent-colors: (#00cceb, #ff7d28);
+$brand-link-color: #43b02a;
+$brand-dim-color: #25861e;
+$brand-status-colors: (
+  critical: #ff324d,
+  error: #ff324d,
+  warning: #ffd602,
+  ok: #8cc800,
+  unknown: #a8a8a8,
+  disabled: #a8a8a8,
+  danger: #d8000c
+) !default;
+$brand-grey-colors: (#000001, #333333, #3b3b3b, #434343, #666666, #f5f5f5);
+$brand-white-color: #fff;
+
+$border-grey: 1px solid #d1d7da;
+$border-grey-hover: 1px solid #ccc;
+$border-white: 1px solid #fff;
+$border-brand: 1px solid $brand-color;
+
+@if not variable-exists(brand-graph-colors) {
+  $brand-graph-colors: ();
+  $brand-graph-colors: join($brand-graph-colors, $brand-accent-colors);
+  $brand-graph-colors: join($brand-graph-colors, $brand-neutral-colors);
+}
+
+$button-secondary-color: nth($brand-neutral-colors, 2);
+
+$brand-font-family: "Work Sans", "Open Sans";
+$brand-large-number-font-family: "Work Sans", "Open Sans";
+$code-font-family: Consolas, Menlo, "DejaVu Sans Mono", "Liberation Mono",
+  monospace;
+$text-strong-font-weight: 500;
+
+/*$large-font-size: 1rem;
+$normal-font-size: 0.950rem;
+$small-font-size: 0.850rem;
+$xsmall-font-size: 0.750rem;*/
+
+$xxxlarge-font-size: rem-calc(32);
+$large-font-size: rem-calc(18);
+$normal-font-size: rem-calc(16);
+$small-font-size: rem-calc(14);
+$xsmall-font-size: rem-calc(12);
+$xxsmall-font-size: rem-calc(10);
+
+$text-color: #444;
+$secondary-text-color: #888;
+$bg-dark-font-color: #ffffff;
+
+//Screen size variables
+$slim-screen: rem-calc(375);
+$small-screen: rem-calc(492);
+$above-small-screen: rem-calc(493);
+$over-small-screen: rem-calc(600);
+$under-medium-screen: rem-calc(851);
+$medium-screen: rem-calc(852);
+$under-large-screen: rem-calc(1019);
+$large-screen: rem-calc(1020);
+$full-screen: rem-calc(1200);
+$xxxlarge-screen: rem-calc(1280);
+$extra-small-screen: rem-calc(320);
+
+//Spacing varibales
+$xxSmallSpace: rem-calc(4);
+$xsmallSpace: rem-calc(8);
+$smallSpace: rem-calc(12);
+$normalSpace: rem-calc(16);
+$mediumSpace: rem-calc(24);
+$largeSpace: rem-calc(48);
+$xLargeSpace: rem-calc(96);
+$xxLargeSpace: rem-calc(120);
+
+//Avatar Sizes
+$smallAvatar: rem-calc(24);
+$noramlAvatar: rem-calc(36);
+$largeAvatar: rem-calc(48);
+$xLargeAvatar: rem-calc(60);
+
+//Icon Sizes
+$xsmallIcon: rem-calc(14);
+$smallIcon: rem-calc(18);
+$mediumIcon: rem-calc(20);
+$normalIcon: rem-calc(24);
+$largeIcon: rem-calc(36);
+$xLargeIcon: rem-calc(48);

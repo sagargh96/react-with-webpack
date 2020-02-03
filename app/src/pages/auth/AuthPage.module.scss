@@ -1,0 +1,14 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.auth-page {
+    .container {
+        max-width: rem-calc(350px);
+        margin: rem-calc(24px auto 0);
+        @include breakpoint(small down) {
+            margin: $smallSpace;            
+        }
+    }
+}

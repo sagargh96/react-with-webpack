@@ -1,0 +1,56 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-app {
+    .ps-tile {
+        text-align: center;
+    }
+    .fixed-bg {
+        position: fixed;
+        height: 120%;
+        width: 100%;
+    }
+    .grommetux-article--scroll-step {
+        text-align: unset;
+    }
+    .grommetux-article__control {
+        background-color: $brand-color;
+        border-radius: 50%;    
+        margin: 0px;
+        padding: rem-calc(16);
+        box-shadow: 0 14px 59px -7px rgba(0,0,0,0.85);
+        @include breakpoint(small down) {
+            padding: rem-calc(10);
+        }
+        SVG.grommetux-control-icon {
+            fill: #FFF;
+            stroke: #FFF;
+            margin-right: 0px;
+            @include breakpoint(small down) {
+                height: $smallIcon;
+                width: $smallIcon;
+            }
+            POLYLINE {
+                stroke-width: 3;
+                @include breakpoint(small down) {
+                    stroke-width: 2;
+                }
+            }
+        }
+        &.grommetux-button:hover {
+            .grommetux-control-icon {
+                fill: #FFF;
+                stroke: #FFF;
+            }
+        }
+    }
+    .grommetux-article__control-up, .grommetux-article__control-down {
+        top: auto;
+        left: auto;
+        bottom: 25px;
+        right: 8px;
+        transform: translateX(-50%);
+    }
+}

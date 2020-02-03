@@ -1,0 +1,18 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-cart-header {
+    padding: 14px $smallSpace;
+    background-color: $brand-color;
+    color: $bg-dark-font-color;
+    
+    h4 {
+        margin: 0;
+    }
+    
+    @include breakpoint(small down) {
+        padding: $smallSpace;
+    }
+}

@@ -1,0 +1,54 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-carousel {
+    .ps-carousel-arrow {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        top: 25%;
+    }
+    &:hover {
+        .ps-carousel-arrow {
+            opacity: 1;
+        }
+    } 
+    .slick-slide {
+        padding: 0;
+        height: auto;
+    }
+    .carousel-wrapper {
+		&.plain-slider {
+			white-space: nowrap;
+			overflow-x: auto;
+			overflow-y: hidden;
+			.slide {
+				display: inline-block;
+				&:first-child {
+					.ps-product-tile {
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+		.slide {
+			&:first-child {
+				.ps-product-tile {
+					border-left: $border-grey;
+				}
+			}
+		}
+        .ps-product-tile {
+			width: 200px;			
+			border-top: $border-grey;
+            @include breakpoint(small down) {
+                width: 170px;
+			}
+		}
+		@include breakpoint(medium down) {	
+			margin-left: rem-calc(-16px);
+			margin-right: rem-calc(-10px);
+		}
+    }
+}

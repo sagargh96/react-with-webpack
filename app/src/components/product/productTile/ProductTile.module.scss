@@ -1,0 +1,68 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-tile {
+    border-right: $border-grey;
+    border-bottom: $border-grey;
+    font-size: $normal-font-size;
+    A {
+        color: $text-color !important;
+        &:hover {
+            text-decoration: none !important;
+        }
+        .tile-content {
+            padding: $smallSpace;
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 6px 0 rgba(0,0,0,.3);
+    }
+    transition: box-shadow .3s ease-out;
+    .product-img {
+        @include breakpoint(small down) {                
+            height: 100px;
+            width: 100px;
+        }
+        height: 130px;
+        width: 130px;
+        margin: 0 auto;
+    }
+    .product-qty {
+        display: inline-block;
+        margin-left: $smallSpace;
+    }
+    .product-old-price {
+        text-decoration: line-through;
+        margin-right: $xxSmallSpace;
+        font-size: $small-font-size;
+        color: map-get($brand-status-colors, critical);
+        display: block;
+    }
+    .product-new-price {
+        margin-right: $xxSmallSpace;
+        font-size: $large-font-size;
+    }
+    .grommetux-select {
+        line-height: 16px;
+        font-size: $small-font-size;
+        .grommetux-select__input {
+            padding: 5px 8px;
+            padding-right: 36px;
+        }
+        .grommetux-button__icon {
+            padding: $xxSmallSpace;
+            svg {
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+    .tile-footer {
+        margin-top: auto;
+    }
+}
+.grommetux-select__drop .grommetux-select__option {
+    font-size: $small-font-size;
+}

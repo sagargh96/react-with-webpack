@@ -1,0 +1,44 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-store-banner {
+    .banner-item {
+        text-align: center;
+    }
+    .grommetux-carousel__controls {
+        display: none;
+    }
+    BUTTON {
+    .grommetux-button__icon {
+        background: gray;
+        opacity: 0.5;
+        border-radius: 50%;
+		display: inline-block;
+		line-height: 0;
+        &:hover {
+            background: white;
+            .grommetux-control-icon {
+                POLYLINE {
+                    stroke: gray;
+                }
+            }
+        }
+        
+        .grommetux-control-icon {
+            margin-right: 0px;
+            stroke: #fff;
+            @include breakpoint(small down) {
+                height: $xsmallIcon;
+                width: $xsmallIcon;
+                POLYLINE {
+                    @include breakpoint(small down) {
+                        stroke-width: 5px;
+                    }
+                }    
+            }
+        }
+    }
+}
+}

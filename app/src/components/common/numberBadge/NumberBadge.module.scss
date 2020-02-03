@@ -1,0 +1,21 @@
+@import '~styles/styles.defaults';
+
+.ps-number-badge {    
+    border-radius: 50%;
+    padding: rem-calc(2px);
+    line-height: 1;
+    text-align: center;
+    min-width: rem-calc(18px);
+    font-size: $small-font-size;
+    height: rem-calc(18px);
+    &.fill {
+        background: #fff;
+        color: $text-color;
+        font-weight: 600;
+    }
+    &.plain {
+        background: $brand-color;
+        color: #fff;
+        font-weight: 400;
+    }
+}

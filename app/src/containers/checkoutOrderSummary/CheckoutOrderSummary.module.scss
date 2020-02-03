@@ -1,0 +1,10 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.checkout-order-summary-widget {    
+    border: $border-grey;
+    padding: $smallSpace;
+    margin: $smallSpace;
+}

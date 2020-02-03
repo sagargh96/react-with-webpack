@@ -1,0 +1,10 @@
+@import '~styles/styles.defaults';
+
+.ps-product-option-selector {
+    SVG.grommetux-control-icon {
+        margin-left: $smallSpace;
+        margin-right: 0px;
+        fill: $brand-dim-color;
+        stroke: $brand-dim-color;
+    }
+}

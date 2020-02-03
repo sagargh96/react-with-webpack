@@ -1,0 +1,9 @@
+@import '~styles/styles.defaults';
+
+.ps-price-row {
+    .price-value {
+        &.charge {
+            color: map-get($brand-status-colors, danger);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '~styles/styles.defaults';
+
+.store-widget {
+    .store-header {
+        background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url('../../../images/vendor.jpg');
+        background-size:cover;
+        color: #fff;
+        padding-bottom: $mediumSpace;
+        padding-top: $mediumSpace;
+    }
+    .loader-wrapper {
+        height: calc(100vh - 100px);
+    }
+}

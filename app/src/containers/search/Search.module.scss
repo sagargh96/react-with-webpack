@@ -1,0 +1,125 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.search-widget {
+    width: calc(100% - 675px);
+    position: absolute;
+    top: rem-calc(5px);
+    color: $text-color;  
+    font-size: $small-font-size;
+    @include breakpoint(medium down) {
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .react-autosuggest__container {        
+        position: relative;
+        width: 100%;     
+        @include breakpoint(medium down) {
+            height: 100vh;
+            background-color:  #fff;
+        }
+        .search-box {
+            INPUT:not(.grommetux-input):not(.grommetux-check-box__input), INPUT:focus {
+                background-color: #fff;
+                border: 0px;
+                border-radius: 4px;
+                padding: rem-calc(8px) rem-calc(42px) rem-calc(8px) rem-calc(12px);
+                width: 100%;
+                @include breakpoint(medium down) {
+                    border-bottom: $border-grey;
+                    border-radius: 0px;
+                    padding-left: rem-calc(42px);
+                }
+            }
+            Button {
+                text-align: center;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                border: 0;
+                .grommetux-control-icon {
+                    fill: #666;
+                    stroke: #666;
+                    width: 20px;
+                    height: 20px;
+                    margin: 0;
+                }
+                &:hover {
+                    .grommetux-control-icon {
+                        fill: #666;
+                        stroke: #666;
+                    }
+                }
+                .grommetux-button__icon {
+                    float: none;
+                }
+                &.search-btn {
+                    right: 0;
+                    top: 0;
+                }
+                &.search-back-btn {
+                    top: 0;
+                    left: 0;
+                    display: none;
+                    @include breakpoint(medium down) {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .react-autosuggest__suggestions-container--open {
+            //display: block;
+            position: absolute;
+            top: 38;
+            background-color: #fff;
+            width: inherit;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);            
+            @include breakpoint(medium down) {
+                box-shadow: none;
+                height: calc(100vh - 100px);
+                overflow: auto;
+            }
+            .suggestion-title {
+                background-color: nth($brand-grey-colors, 6);
+                padding: $xsmallSpace;
+            }
+            UL.react-autosuggest__suggestions-list {
+                list-style: none;
+                margin: 0px;
+                LI {
+                    max-width: unset;
+                    font-size: $small-font-size;
+                }
+            }
+            A {
+                color: $text-color;
+                display: block;
+                padding: $xsmallSpace;
+                &:hover {
+                    text-decoration: none;
+                    background-color: nth($brand-grey-colors, 6);
+                    transition: background 1s ease;
+                }
+                .grommetux-anchor__icon {
+                    padding: 0;
+                    height: $xsmallIcon;
+                }
+                .grommetux-control-icon {
+                    height: $xsmallIcon;
+                    width: $xsmallIcon;
+                    fill: #666;
+                    stroke: #666;
+                    margin: 0px $xsmallSpace 0px 0px;
+                }
+                .link-next-icon {
+                    float: right;
+                }
+            }
+        }        
+    }
+}

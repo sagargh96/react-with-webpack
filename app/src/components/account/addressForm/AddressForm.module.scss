@@ -1,0 +1,13 @@
+@import '~styles/styles.defaults';
+
+.ps-address-form {
+    .save-btn {
+        margin-left: $smallSpace;
+    }
+    .address-type-tiles {
+        .grommetux-box--size-small {
+            width: rem-calc(90px);
+            padding: rem-calc(6px);
+        }
+    }
+}

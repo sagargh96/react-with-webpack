@@ -1,0 +1,30 @@
+@import '~styles/styles.defaults';
+.ps-cart-footer {
+    padding: $smallSpace;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 -2px 6px 0 rgba(0,0,0,.1);
+    .checkout-btn {
+        .grommetux-button__icon {
+            float: right;
+            padding-left: $smallSpace;
+            .grommetux-control-icon {
+                margin-right: 0px;
+            }
+        }
+        .grommetux-button {
+            font-size: 1rem;
+            width: 100%;
+            padding: 6px 12px;
+            max-width: 100%;
+        }
+    }
+    .promo-wrapper {
+        .grommetux-control-icon {
+            display: none;
+        }
+        A {
+            font-size: $normal-font-size;
+        }
+    }
+}

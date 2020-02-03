@@ -1,0 +1,21 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-address-tile {
+    position: relative;
+    &.grommetux-tile {
+        margin: 0 $smallSpace $smallSpace 0;
+        width: 100%;
+        max-width: 240px;
+    }
+    .address-action-controls {
+        position: absolute;
+        top: rem-calc(6px);
+        right: rem-calc(6px);
+    }
+    .footer {
+        margin-top: auto;
+    }
+}

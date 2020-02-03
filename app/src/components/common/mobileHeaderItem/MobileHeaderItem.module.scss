@@ -1,0 +1,59 @@
+@import '~styles/styles.defaults';
+
+.ps-mobile-header-item {
+	display: inline-block;
+	font-weight: 600;
+	padding: rem-calc(6px) rem-calc(0px);
+    .item-icon {
+        position: relative;
+    }
+    .item-text {
+        color: $text-color;
+		line-height: 1;
+		padding-top: rem-calc(4px);
+    }
+    .ps-number-badge {
+        height: $normalSpace;
+        min-width: $normalSpace;
+        position: absolute;
+        left: $smallSpace;
+        font-size: $xsmall-font-size;
+        bottom: rem-calc(8px);
+    }
+    .grommetux-control-icon {        
+        height: $smallIcon;
+        width: $smallIcon;        
+        fill: $text-color;
+        stroke: $text-color;
+        margin-right: 0;
+    }
+    
+    .grommetux-button, .grommetux-anchor {
+        font-size: $xsmall-font-size;
+        display: inline-table;
+		line-height: 1;
+        &:hover {
+            .grommetux-control-icon {
+                fill: $text-color;
+                stroke: $text-color;
+            }
+        }
+    }
+    &.active {
+        .item-text {
+            color: $brand-color;
+        }
+        .grommetux-control-icon {       
+            fill: $brand-color;
+            stroke: $brand-color;
+        }     
+		.grommetux-button {
+			&:hover {
+				.grommetux-control-icon {
+					fill: $brand-color;
+					stroke: $brand-color;
+				}
+			}
+		}
+    }
+}

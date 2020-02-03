@@ -1,0 +1,106 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.checkout-widget {
+    .ps-checkout-step {
+        .step-details {
+            .body {
+                margin-left: rem-calc(50px);
+                @include breakpoint(small down) {
+                    margin-left: 0;
+                }
+            }
+            @include breakpoint(small down) {
+                .delivery-time-step-widget {
+                    .body {
+                        margin-left: 0px;
+                    }
+                }
+            }
+            .summary {
+                margin-left: rem-calc(50px);
+                margin-right: rem-calc(80px);
+                @include breakpoint(small down) {                
+                    margin-left: rem-calc(34px);
+                }                
+            }            
+            .tab-container {
+                border: $border-grey;
+                padding: 0 $smallSpace $smallSpace;
+            }
+        }
+    }
+    .delivery-address-step-widget {
+        .loader-wrapper {
+            height: 200px;
+            position: relative;
+        }
+        @include breakpoint(small down) {  
+            .address-list {
+                margin-left: rem-calc(34px);
+            }
+        }
+        .ps-address-tile {
+            font-size: $small-font-size;
+        }
+    }
+    .delivery-time-step-widget {
+        .summary {
+            SPAN {
+                display: inline-block;
+            }
+        }
+        .tab-container {
+            .ps-tabs {
+                .tab-lbl {
+                    text-align: center;
+                    .day, .date {
+                        display: block;
+                    }
+                    .date {
+                        text-transform: capitalize;
+                    }
+                }
+
+                .grommetux-tab {
+                    padding: 0px;
+                    .grommetux-tab__label {
+                        padding-left: $normalSpace;
+                        padding-right: $normalSpace;
+                    }
+                    @include breakpoint(small down) {
+                        padding: 0px; 
+                        .grommetux-tab__label {
+                            padding-left: $xsmallSpace;
+                            padding-right: $xsmallSpace;
+                        }
+                    }
+                }
+            }
+            .grommetux-form-field__contents {
+                margin-right: 0px;
+            }
+            .grommetux-form-field {
+                border: 0;
+                padding: 0;
+            }
+        }
+    }
+    .payment-method-step-widget {
+        .ps-order-summary {
+            border: $border-grey;
+            padding: $smallSpace;
+        }
+    }
+    .online-payment-options-widget {
+        .option-img {
+            width: rem-calc(100px);
+        }
+        .grommetux-form-field {
+            padding: 0;
+            border: 0;
+        }
+    }
+}

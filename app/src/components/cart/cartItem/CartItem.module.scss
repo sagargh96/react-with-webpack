@@ -1,0 +1,26 @@
+@import '~styles/styles.defaults';
+
+.ps-cart-item {
+    border-bottom: $border-grey;
+    padding: $smallSpace 0px;
+    .product-img-wrapper {
+        IMG {
+            height: rem-calc(65px);
+            width: rem-calc(65px);
+        }
+    }
+    .product-details-wrapper {
+        padding-left: $smallSpace;
+    }
+    LABEL.item-price {
+        margin: 0px 0px 0px $mediumSpace;
+    }
+    .ps-cart-item-add-remove-btn {
+        .item-qty {
+            padding: 1px 16px;
+        }
+        .ps-button.grommetux-button {
+            padding: 3px 10px; 
+        }
+    }     
+}

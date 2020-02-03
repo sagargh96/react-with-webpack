@@ -1,0 +1,36 @@
+@import '~styles/styles.defaults';
+
+.ps-account-signup-form {
+    FORM {
+        .sub-heading {
+            text-align: center;
+        }
+    }
+    .sign-up-option {
+        ul {
+            list-style: none;
+            margin: 0px;
+        }
+        text-align: center;
+    }
+    .terms-n-conditions {
+        font-size: $small-font-size;
+        text-align: center;
+    }
+    .social-auth-login {
+        DIV.columns {
+            padding: 0px;
+        }
+        DIV.columns:first {
+            padding-right: $smallSpace;
+        }
+        .ps-social-auth-button {
+            padding: $xsmallSpace $smallSpace;
+        }
+    }
+    .ps-or-separator {
+        .line {
+            width: 35%;
+        }
+    }
+}

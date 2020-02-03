@@ -1,0 +1,8 @@
+@import '~styles/styles.defaults';
+
+.ps-cash-on-delivery {
+    text-align: center;
+    .cod-img, .cow-img {
+        width: rem-calc(100px);
+    }
+}

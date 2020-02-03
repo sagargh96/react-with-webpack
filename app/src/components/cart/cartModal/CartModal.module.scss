@@ -1,0 +1,51 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-cart-modal {
+    @include breakpoint(medium only) {
+        top: 0;
+        width: calc(50%);
+    }
+    @include breakpoint(large) {
+        top: 0;
+        width: calc(32%);
+    }
+    
+    @include breakpoint(small) {
+        top: 0;
+        width: calc(100%);
+    }
+    .cart-wrapper {
+         display: -moz-flex;
+        -moz-flex-direction: column;
+        
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        
+        display: -ms-flex;
+        -ms-flex-direction: column;
+        
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .modal-closer {
+        BUTTON {
+            color: $bg-dark-font-color !important;
+        }
+    }
+    .cart-body {
+        overflow-y: auto;
+        position: absolute;
+        width: 100%;
+        top: rem-calc(45px);
+        bottom: rem-calc(100px);
+    }
+    .cart-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+}

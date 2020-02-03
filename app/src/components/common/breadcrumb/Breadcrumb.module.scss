@@ -1,0 +1,20 @@
+@import '~styles/styles.defaults';
+
+.ps-breadcrumb {
+    UL {
+        margin: 0 0 $normalSpace 0;
+        list-style: none;
+        &.inline {
+            LI {
+                display: inline-block;
+                font-size: $small-font-size;
+            }
+        }
+        LI {
+             &:not(:last-child)::after {
+                content: '/';
+                padding: 0px 5px;
+            }
+        }
+    }
+}

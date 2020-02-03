@@ -1,0 +1,40 @@
+@import '~styles/styles.defaults';
+.ps-alert {
+    &.info, &.success, &.warning, &.error {
+        padding: $xsmallSpace; 
+        font-size: $normal-font-size;   
+    }
+    &.info {
+        >SPAN {
+            color: #00529B;
+        }
+        background-color: #BDE5F8;
+        border-bottom: 1px solid #00529B;
+    }
+    &.success {
+        >SPAN {
+            color: #4F8A10;
+        }
+        background-color: #DFF2BF;
+        border-bottom: 1px solid #4F8A10;
+    }
+    &.warning {
+        >SPAN {
+            color: #9F6000;
+        }
+        background-color: #FEEFB3;
+        border-bottom: 1px solid #9F6000;
+    }
+    &.error {
+        >SPAN {
+            color: #D8000C;
+        }
+        background-color: rgb(253, 230, 235);
+        border-bottom: 1px solid #D8000C;
+    }
+    .info i, .success i, .warning i, .error i {
+        margin:10px 22px;
+        font-size:2em;
+        vertical-align:middle;
+    }
+}

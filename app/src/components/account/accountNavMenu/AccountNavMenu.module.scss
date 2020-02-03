@@ -1,0 +1,36 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+
+.ps-account-nav-menu {
+    .account-details {
+        background: $brand-color;
+        padding: $smallSpace $smallSpace;
+        border-bottom: $border-grey;
+        .user-avatar {
+            vertical-align: $xxSmallSpace;
+            display: inline-block;
+        }
+        .user-details {
+            margin-left: $mediumSpace;
+            display: inline-block;
+            color: #FFF;
+            H4 {
+                margin-bottom: 0px;
+            }
+            .secondary-text {
+                color: #FFF;
+                font-weight: 300;
+            }
+        }
+    }
+    .account-nav {
+        a.account-nav-item {
+            padding-top: rem-calc(16px);
+            padding-bottom: rem-calc(16px);
+            border-bottom: $border-grey;
+            color: $text-color;
+            font-size: $normal-font-size;
+            font-weight: 400;
+        }
+    }
+}

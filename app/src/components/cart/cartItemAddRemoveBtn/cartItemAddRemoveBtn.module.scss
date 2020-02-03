@@ -1,0 +1,39 @@
+@import '~styles/styles.defaults';
+
+.ps-cart-item-add-remove-btn {
+    background-color: $brand-color;
+    .item-qty {
+        margin: 4px 0px;
+        padding: 4px 16px;
+        background-color: #fff;
+        LABEL{
+            margin: 0 auto;
+        }
+    }
+        .ps-button.grommetux-button {
+            padding: rem-calc(6px 10px);
+            color: #fff;
+            border: 0px;
+            border-radius: 0px;
+            &.no-item {
+                font-size: $normal-font-size;
+                width: 100%;
+                padding-top: rem-calc(6);
+                padding-bottom: rem-calc(6);
+            }
+        .grommetux-button__icon {
+            padding: 0;
+        }
+        .grommetux-control-icon {
+            fill: #fff;
+            stroke: #fff;
+            transition: none;
+            margin-right: 0px;
+            vertical-align: middle;
+        }       
+        .grommetux-control-icon--small {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

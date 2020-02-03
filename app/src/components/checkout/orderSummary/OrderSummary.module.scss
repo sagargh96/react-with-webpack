@@ -1,0 +1,19 @@
+@import '~styles/styles.defaults';
+
+.ps-order-summary {
+    UL {
+        list-style: none;
+        margin-left: 0px;
+        LI {
+            padding: $xxSmallSpace;
+        }
+        &.total-amount {
+            border-top: $border-grey;
+            padding-top: $xsmallSpace;
+            margin-bottom: 0px;
+        }
+        &.price-summary {
+            margin-bottom: $xsmallSpace;
+        }
+    }
+}

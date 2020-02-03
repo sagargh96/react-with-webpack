@@ -1,0 +1,14 @@
+@import '~styles/styles.defaults';
+
+.ps-browse-department-nav-header {
+    background: nth($brand-grey-colors, 6);;
+    padding: $smallSpace 0px;
+    border-bottom: $border-grey;
+    .store-details {
+        padding-left: $smallSpace;
+        padding-right: 0px;
+        H4 {
+            margin-bottom: rem-calc(6px);
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.ps-social-auth-button {
+    &.ps-button {
+        &.google {
+            background: #dd4b39;
+            color: #fff;
+        }
+        &.facebook {
+            background-color: #3b5999;
+        }
+        .grommetux-button__icon {
+            display: inline;
+        }
+    }
+}

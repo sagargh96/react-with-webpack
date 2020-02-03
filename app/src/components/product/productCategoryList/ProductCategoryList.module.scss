@@ -1,0 +1,25 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-category-list {
+    padding: 0 $xsmallSpace;
+    [class*="column"]+[class*="column"]:last-child {
+        float: left;
+    }
+    
+    @include breakpoint(small down) {
+        padding-bottom: $smallSpace;
+    }
+
+    li.product-category-item {
+        list-style-type: none;
+        max-width: unset;
+        padding-left: $xsmallSpace;
+        padding-right: $xsmallSpace;
+        @include breakpoint(medium up) {
+            padding-bottom: $smallSpace;
+        }
+    }
+}

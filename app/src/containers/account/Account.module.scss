@@ -1,0 +1,27 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-account-widget {
+    padding: $mediumSpace $largeSpace $mediumSpace;
+    @include breakpoint(small down) {
+        padding: $largeSpace $smallSpace $mediumSpace;
+    }
+}
+
+.account-nav-modal {    
+    @include breakpoint(medium only) {
+        top: 0;
+        width: calc(50%);
+    }
+    @include breakpoint(large) {
+        top: 0;
+        width: calc(32%);
+    }
+    
+    @include breakpoint(small) {
+        top: 0;
+        width: calc(100%);
+    }
+}

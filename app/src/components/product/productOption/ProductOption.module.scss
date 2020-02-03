@@ -1,0 +1,19 @@
+@import '~styles/styles.defaults';
+
+.ps-product-option {
+    .quantity {
+        font-size: $large-font-size;
+    }
+    .pricing {
+        padding-top: rem-calc(6px);
+        .product-old-price {
+            text-decoration: line-through;
+            margin-right: $xxSmallSpace;
+            font-size: $small-font-size;
+            color: map-get($brand-status-colors, critical);
+        }
+    }
+    .ps-cart-item-add-remove-btn {
+        width: rem-calc(134px);
+    }
+}

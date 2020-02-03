@@ -1,0 +1,128 @@
+$fonts-path: "./fonts";
+$fonts-path-montserrat: "#{$fonts-path}/montserrat";
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Open Sans'),
+    local('OpenSans-Normal'),
+    url("#{$fonts-path}/openSans_normal.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Open Sans'),
+    local('OpenSans-semibold'),
+    url("#{$fonts-path}/openSans_semibold.woff") format('woff');
+}
+
+/* Worksans */
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Work Sans Light'),
+    local('WorkSans-Light'),
+    url("#{$fonts-path}/worksans_light.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Work Sans'),
+    local('WorkSans-Regular'),
+    url("#{$fonts-path}/worksans_regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('Work Sans Medium'),
+    local('WorkSans-Medium'),
+    url("#{$fonts-path}/worksans_medium.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Work Sans SemiBold'),
+    local('WorkSans-SemiBold'),
+    url("#{$fonts-path}/worksans_semibold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Work Sans Bold'),
+    local('WorkSans-Bold'),
+    url("#{$fonts-path}/worksans_bold.woff2") format('woff2');
+}
+
+
+/* Montserrat */
+/*
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Montserrat Light'),
+    local('Montserrat-Light'),
+    url("#{$fonts-path-montserrat}/Montserrat-Light.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Montserrat'),
+    local('Montserrat-Regular'),
+    url("#{$fonts-path-montserrat}/Montserrat-Regular.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('Montserrat Medium'),
+    local('Montserrat-Medium'),
+    url("#{$fonts-path-montserrat}/Montserrat-Medium.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Montserrat SemiBold'),
+    local('Montserrat-SemiBold'),
+    url("#{$fonts-path-montserrat}/Montserrat-Semibold.ttf") format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Montserrat Bold'),
+    local('Montserrat-Bold'),
+    url("#{$fonts-path-montserrat}/Montserrat-Bold.ttf") format('ttf');
+} */

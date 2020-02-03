@@ -1,0 +1,36 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-products-page {
+    .table-wrapper {
+        display: table;
+        width: 100%;
+    }
+    .table-row {
+        display: table-row;
+    }
+    .left-panel {
+        display: table-cell;        
+        width: 295px;
+    }
+    .right-panel {
+        display: table-cell;
+    }
+    .category-side-nav {        
+        height: calc(100vh - 60px);
+        left: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        border-left: $border-grey;
+        border-right: $border-grey;
+        width: 295px;
+        padding: 0px $xsmallSpace;
+        top: 53px;
+        @include breakpoint(medium down) {
+            width: 248px; 
+        }
+    }
+}

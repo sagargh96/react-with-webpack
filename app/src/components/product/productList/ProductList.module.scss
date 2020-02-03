@@ -1,0 +1,16 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-list {
+    border-top: $border-grey;        
+    @include breakpoint(medium down) {
+        border-left: $border-grey;
+    }
+    .columns {
+        &.product-list-item{
+            padding: 0px;
+        }
+    }
+}

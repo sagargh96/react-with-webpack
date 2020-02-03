@@ -1,0 +1,39 @@
+@import '~styles/styles.defaults';
+
+.ps-carousel-arrow {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    opacity: 1;
+
+    &.next {
+        right: -10px;
+    }
+    &.prev {
+        left: -10px;
+    }
+    .grommetux-button {
+        background: $brand-color;
+        box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+        border-radius: 50%;
+        padding: 12px;
+		line-height: 0;
+    }
+    .grommetux-button--disabled {
+        opacity: 0;
+    }
+    .grommetux-button__icon {
+		padding: 0px;
+		line-height: 0;
+        .grommetux-control-icon {
+            height: $xsmallIcon;
+            width: $xsmallIcon;
+            fill: #FFF;
+            stroke: #FFF;
+            margin-right: 0px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-category {
+    A:hover {
+        text-decoration: none !important;
+    }
+    .category-content {
+        color: $text-color;
+        border-bottom: $border-grey;
+        
+        @include breakpoint(medium) {
+            border: $border-grey;
+            &:hover {
+                border: $border-grey-hover;
+                cursor: pointer;
+            }
+            .grommetux-control-icon {
+                margin-right: $smallSpace;
+            }
+            .category-details {
+                margin: 0px $smallSpace;
+            }
+        }       
+        .category-name {
+            H4 {
+                margin-bottom: $xsmallSpace;
+            }
+        }
+        .category-details {
+            margin: 0px $xsmallSpace;
+        }       
+    }
+    .category-image {
+        @include breakpoint(medium) {
+            height: 168px;
+            width: 168px;
+        }
+        height: 64px;
+        width: 64px;
+    }
+    .grommetux-control-icon--small {
+        width: 16px;
+        height: 16px
+    }
+}

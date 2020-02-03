@@ -1,0 +1,8 @@
+@import '~styles/styles.defaults';
+
+.ps-order-confirmation-summary-item {
+    border-bottom: $border-grey;
+    .icon {
+        padding-right: $normalSpace;
+    }
+}

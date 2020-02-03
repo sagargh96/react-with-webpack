@@ -1,0 +1,98 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-header-widget {
+    .mini {
+        margin-bottom: 0px;
+    }
+    min-height: $largeSpace;
+    position: fixed;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    transition: box-shadow 200ms linear;
+    padding: 0px $smallSpace;
+    .header-nav { 
+        .ps-button {      
+            @include breakpoint(medium down) {
+                padding: 0px;
+            }           
+            padding: $smallSpace 0 $smallSpace $smallSpace; 
+        }
+    }
+    .my-location-wrap {
+        width: 200px;
+        vertical-align: middle;        
+        button {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .offers-wrap {
+        width: 100px;        
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .browse-departments {           
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .search-wrap {  
+        @include breakpoint(medium down) {
+            //display: none;
+        } 
+    }
+    .my-account-wrap {
+        width: 152px;
+        vertical-align: middle;
+        @include breakpoint(medium down) {
+            width: auto;            
+            .grommetux-button__label {
+                font-size: 0.755rem;
+                display: none;
+            }
+        }
+    }    
+    .my-cart-wrap {
+        width: 124px;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;   
+        @include breakpoint(medium down) {
+            display: none;
+        }
+    }
+    .grommetux-button__icon {
+        float: left;
+        padding: 0px;
+    }
+    .grommetux-button__label {
+        font-size: 1rem;
+    }
+    .grommetux-control-icon {
+        margin-right: rem-calc(5px);
+        height: $mediumIcon;
+        width: $mediumIcon;
+    }
+    UL.mobile-header {
+        >LI {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+        }
+        &.sticky {
+            margin: 0;
+            position: fixed;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            border-top: $border-grey;
+            background-color: $brand-white-color;
+            //box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px #333;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.order-confirmation-widget {
+    @include breakpoint(large up) {
+        .order-confirmation-container {        
+            border-top: $border-grey;
+        }
+        .order-conf-summary-container {
+                border-right: $border-grey;
+        }
+    }
+
+    
+    @include breakpoint(medium down) {
+        margin-bottom: 52px;
+        .ps-order-confirmation-summary {
+            .action-btn-bar {                
+                position: fixed;
+                bottom: 0px;
+                margin-left: rem-calc(-10px);
+            }
+        }
+    }
+
+}

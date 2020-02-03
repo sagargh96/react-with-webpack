@@ -1,0 +1,17 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.checkout-page {
+    max-width: rem-calc(980);
+    .checkout-wrapper {
+        margin: $smallSpace;
+        border: $border-grey;
+        @include breakpoint(small down) {
+            margin: $smallSpace 0 0 0;
+            border: 0px;
+            border-bottom: $border-grey;
+        }
+    }
+}

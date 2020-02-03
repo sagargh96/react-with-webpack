@@ -1,0 +1,54 @@
+.ps-store-location-search-box {
+    .search-input,
+    .search-input:focus,
+    .search-input:active {
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+        border: honeydew;
+        display: block;
+        width: 100%;
+        padding: 12px;
+        font-size: 1.0rem;
+        border-radius: 2px;
+        outline: none;
+    }
+
+    .autocomplete-container {
+        border-bottom: honeydew;
+        border-left: honeydew;  
+        border-right: honeydew;
+        border-top: 1px solid #e6e6e6;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border-radius: 0 0 2px 2px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        display: block;
+        background-color: honeydew;
+    }
+
+    .autocomplete-container-hidden {
+        display: none;
+    }
+
+    .autocomplete-item {
+        background-color: #ffffff;
+        padding: 8px;
+        color: #555555;
+        cursor: pointer;
+    }
+
+    .autocomplete-item-active {
+        background-color: #fafafa
+    }
+
+    .suggestion-item {
+        text-align: left;
+        font-size: 1.0rem;
+        line-height: 1.5;
+        .icon-small {
+            height: 13px;
+            width: 13px;
+            padding-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import '~styles/styles.defaults';
+
+.ps-store-details {
+    .store-title {
+        font-weight: bold !important;
+        margin-bottom: 0px;
+    }
+    .sub-title {
+        margin-right: $mediumSpace
+    }
+}

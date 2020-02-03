@@ -1,0 +1,41 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-product-subcategory-sidenav {
+    /*background: rgba(248, 248, 248, 0.95);*/
+    .sidenav-header {
+        .store-details {
+            padding-left: $smallSpace;
+            padding-right: 0px;
+            H4 {
+                margin-bottom: $smallSpace;
+            }
+        }
+    }
+    .grommetux-menu--primary {
+        a {
+            &.nav-item {
+                padding-top: $xsmallSpace !important;
+                padding-bottom: $xsmallSpace !important;
+                line-height: $mediumSpace;
+                font-size: $normal-font-size;     
+            }
+        }
+    }
+    .grommetux-accordion {
+        .grommetux-accordion-panel {
+            .grommetux-button {
+                header {
+                    min-height: 48px;
+                    font-size: $normal-font-size;
+                    .grommetux-control-icon {
+                        height: $xsmallIcon;
+                        width: $xsmallIcon;
+                    }
+                }
+            }
+        }
+    }
+}

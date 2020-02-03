@@ -1,0 +1,145 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.modal-overlay {
+    &.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    background-color: rgba(0,0,0,0.288);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.modal-overlay--fade-in {
+    -webkit-animation: overlayFadeIn .4s ease;
+    animation: overlayFadeIn .4s ease;
+}
+.modal-overlay--fade-out {
+    -webkit-animation: overlayFadeOut .4s ease;
+    animation: overlayFadeOut .4s ease;
+}
+.modal-content--align-center {
+    overflow: auto;
+    max-height: 77%;
+    @include breakpoint(small down) {
+        max-height: 100%;
+    }           
+}
+
+.modal-content--align-right {
+    background: #fff;
+    -webkit-transition: right .4s ease;
+    transition: right .4s ease;
+    padding: 0;
+    left: auto;
+    outline: none;
+    overflow: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.modal-content--align-left {
+    background: #fff;
+    -webkit-transition: left .4s ease;
+    transition: left .4s ease;
+    padding: 0;
+    left: auto;
+    outline: none;
+    overflow: auto;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.modal-content--align-right--appear,
+.modal-content--align-right--leave {
+    right: -438px!important
+}
+.modal-content--align-right--appear.modal-content--align-right--appear-active {
+    right: 0!important;
+}
+
+.modal-content--align-left--appear,
+.modal-content--align-left--leave {
+    left: -438px!important
+}
+.modal-content--align-left--appear.modal-content--align-left--appear-active {
+    left: 0!important;
+}
+
+.ps-modal {
+    &.grommet {
+        background: transparent;
+        .modal-closer {
+            right: $smallSpace;
+            top: $smallSpace;
+            position: absolute;
+            &.invert {
+                BUTTON {
+                    color: #FFF;
+                }
+            }
+            BUTTON {
+                background: none;
+                border: none;
+                color: nth($brand-grey-colors, 4);
+                cursor: pointer;
+                font-size: $xxxlarge-font-size;
+                font-weight: lighter;
+                outline: none;
+                padding: 0;
+                z-index: 1;
+                line-height: 0.6;
+                min-width: auto;
+            }
+        }
+        
+        .modal-header {
+            padding: $smallSpace;
+            background-color: $brand-color;
+            color: $bg-dark-font-color;
+            .modal-closer {
+                color: $bg-dark-font-color;
+            }
+            h4 {
+                margin: 0;
+            }
+            @include breakpoint(small down) {
+                padding: $smallSpace;
+            }
+        }
+    }
+    &.center {
+        max-height: 80%;
+        max-width: calc(100vw - 48px);
+        position: relative;
+        width: 550px;
+        background: #fff;
+        box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2), 0px 24px 38px 3px rgba(0,0,0,0.14), 0px 9px 46px 8px rgba(0,0,0,0.12);
+        padding: 0;
+        border-radius: 2px;
+        
+        @include breakpoint(small down) {
+            box-shadow: none;
+            height: calc(100% - 200px);
+            overflow-y: auto;
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            border-radius: 0;
+        }
+    }
+}

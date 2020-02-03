@@ -1,0 +1,45 @@
+@import '~styles/styles.defaults';
+
+.ps-product-detail {
+    .productDetail-img {
+        text-align: center;
+    }
+    .productDetail-price {
+        .productDetail-old-price {
+            text-decoration: line-through;
+            font-size: $large-font-size;
+            margin-right: $xxSmallSpace;
+            color: map-get($brand-status-colors, critical);
+        }
+        .productDetail-new-price {
+            margin-right: $xxSmallSpace;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $brand-color;
+        }
+    }
+    .product-qty-select {
+        width: 40%;
+        INPUT {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+        }
+        .grommetux-button__icon {
+            padding: 0px;
+            .grommetux-control-icon-caret-down {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+    }
+    .ps-cart-item-add-remove-btn {
+        width: rem-calc(200px);
+        BUTTON {
+            &.grommetux-button.no-item {
+                height: rem-calc(48px);
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

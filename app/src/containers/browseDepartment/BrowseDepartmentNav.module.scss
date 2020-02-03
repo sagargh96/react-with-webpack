@@ -1,0 +1,28 @@
+@import '~styles/styles.defaults';
+
+.ps-browse-department-nav {       
+    .grommetux-menu--primary {
+        .nav-item {     
+            a {
+                padding-top: $xsmallSpace !important;
+                padding-bottom: $xsmallSpace !important;
+                line-height: $mediumSpace;
+                font-size: $normal-font-size;     
+            }
+        }
+    }
+    .grommetux-accordion {
+        .grommetux-accordion-panel {
+            .grommetux-button {
+                header {
+                    min-height: 48px;
+                    font-size: $normal-font-size;
+                    .grommetux-control-icon {
+                        height: rem-calc(14px);
+                        width: rem-calc($smallIcon);
+                    }
+                }
+            }
+        }
+    }
+}

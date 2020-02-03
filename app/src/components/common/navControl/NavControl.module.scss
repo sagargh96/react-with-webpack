@@ -1,0 +1,108 @@
+.ps-navcontrol {
+    .ps-hamburger {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 96px;
+        height: 96px;
+        font-size: 0;
+        text-indent: -9999px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        
+        &.small {
+             width: 58px;
+             height: 48px;
+            span {
+                height: 2px;
+             overflow: visible !important;
+                &:before, &:after {
+                    position: absolute;
+                    display: block;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    content: "";
+                }
+                &:before {
+                    top: -5px;
+                }
+                &:after {
+                    bottom: -5px;
+                }
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            height: 8px;
+            background: white;
+            &:before, &:after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 8px;
+                background-color: #fff;
+                content: "";
+            }
+            &:before {
+                top: -20px;
+            }
+            &:after {
+                bottom: -20px;
+            }
+        }
+    }
+
+.ps-hamburger--htx span {
+  transition: background 0s 0.3s;
+}
+
+.ps-hamburger--htx span::before,
+.ps-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.ps-hamburger--htx span::before {
+  transition-property: top, transform;
+}
+
+.ps-hamburger--htx span::after {
+  transition-property: bottom, transform;
+}
+
+.ps-hamburger--htx.active span {
+  background: none;
+}
+
+.ps-hamburger--htx.active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.ps-hamburger--htx.active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.ps-hamburger--htx.active span::before,
+.ps-hamburger--htx.active span::after {
+  transition-delay: 0s, 0.3s;
+}
+}

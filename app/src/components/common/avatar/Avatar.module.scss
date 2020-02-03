@@ -1,0 +1,42 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-avatar {
+    a {
+        display:flex;
+        align-items: center; 
+        justify-content: center;       
+        width: $xLargeAvatar;
+        height: $xLargeAvatar;
+        border-radius: 50%;
+        border: $border-grey;
+        background-color: #FFF;
+        &.invert {
+            border: $border-white;
+            color: #FFF;
+            &:hover {
+                text-decoration: none;
+                border: $border-white;
+                color: #FFF;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+            border: $border-grey-hover;
+        }
+        .avatar-text {
+            font-size: rem-calc(32px);
+            font-weight: 600;
+        }        
+        @include breakpoint(medium down) {            
+            .avatar-text {
+                font-size: rem-calc(24px);
+                font-weight: 600;
+            }       
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

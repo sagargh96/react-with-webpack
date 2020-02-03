@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+    <link rel="stylesheet" href="/public/bundle.css"></link>    
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        console.log("<%= JSON.stringify(requestData) %>");
+        window.paymentTxnData = "<%= JSON.stringify(requestData) %>";
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw76TjGx9-dm03RawlJw4-ajDgKL1l4YM&amp;libraries=places"></script>
+    <script type="text/javascript" src="/public/vendor.js"></script>
+    <script type="text/javascript" src="/public/main.js"></script>
+    
+</body>
+
+</html>

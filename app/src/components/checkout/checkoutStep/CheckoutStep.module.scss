@@ -1,0 +1,78 @@
+@import '~styles/styles.defaults';
+@import '~foundation-sites/scss/util/unit';
+@import '~foundation-sites/scss/util/value';
+@import '~foundation-sites/scss/util/breakpoint';
+
+.ps-checkout-step {
+    .step-number {
+        border-radius: 50%;
+        border: 1px solid nth($brand-grey-colors, 5);
+        font-size: $normal-font-size;
+        text-align: center;
+        height: rem-calc(16px);
+        width: rem-calc(16px);
+        margin-right: $mediumSpace;
+        padding: $xxSmallSpace;
+        box-sizing: unset;
+        line-height: 1;
+        @include breakpoint(small down) {
+            font-size: $xsmall-font-size;
+            height: rem-calc(12px);
+            width: rem-calc(12px);
+            margin-right: $smallSpace;
+        }
+        &.active {
+            color: $brand-color;
+            border: $border-brand;
+        }
+        &.complete {
+            .grommetux-control-icon {
+                POLYLINE {
+                    stroke-width: 3;
+                }
+                color: #fff;
+                height: rem-calc(16px);
+                width: rem-calc(16px);
+                @include breakpoint(small down) {
+                    height: rem-calc(12px);
+                    width: rem-calc(12px);
+                }
+            }
+            border: $border-brand;
+            background: $brand-color;
+        }
+    }
+    .step-header {
+        margin-bottom: 10px;
+    }
+    .step-title {
+        color: $secondary-text-color;
+        margin-bottom: 0px;
+        @include breakpoint(medium down) {
+            font-size: $normal-font-size;
+        }
+    }
+    .step-details {
+        &.active {
+            margin-top: $normalSpace;
+        }
+    }
+    
+    
+    //Checkout step animation
+    .checkout-step-transition-appear,.checkout-step-transition-leave {
+        opacity: 0.00;
+    }
+    .checkout-step-transition-appear-active {
+        opacity: 1;
+        transition: all 700ms;
+    }
+    //Checkout step animation
+    .checkout-step-transition-enter {
+        opacity: 0.00;
+    }
+    .checkout-step-transition-enter-active {
+        opacity: 1;
+        transition: all 700ms;
+    }
+}

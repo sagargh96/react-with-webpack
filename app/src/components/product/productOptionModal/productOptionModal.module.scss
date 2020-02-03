@@ -1,0 +1,14 @@
+@import '~styles/styles.defaults';
+
+.ps-product-option-modal {
+    padding: $mediumSpace $largeSpace $mediumSpace;
+    .ps-product-option-detail {
+        text-align: center;
+    }
+    .ps-product-option-list {
+        .ps-product-option {
+            padding: $smallSpace;
+            border-bottom: $border-grey;
+        }
+    }
+}

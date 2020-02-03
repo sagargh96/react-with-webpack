@@ -1,0 +1,427 @@
+// Delete if you don't want to use foundation and don't need any starter styles.
+@import 'foundation_settings';
+@import 'fonts';
+@import 'styles.defaults';
+@import '~foundation-sites/scss/foundation';
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+@include foundation-visibility-classes;
+@import '~foundation-sites/scss/util/breakpoint';
+/* grommet css started*/
+@import '~grommet/scss/grommet-core/index';
+//@import '~grommet/scss/vanilla/objects.button-vanilla';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+// .grommetux-sidebar {
+//   @include animation('slide-out-sidebar 0.25s');
+// }
+// @include keyframes(slide-out-sidebar) {
+//   0% {
+//     width: 0;
+//   }
+
+//   100% {
+//     width:  $sidebar-width;
+//   }
+// }
+html {
+    font-family: $brand-font-family;
+    color: $text-color;
+    overflow:  unset;
+    
+    BODY {
+        &.ReactModal__Body--open {
+            overflow: hidden;
+        }
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $normalSpace;
+}
+
+H1, H2 {
+    font-weight: 500 !important;
+}
+H3, H4, H5, H6 {
+    font-weight: 400 !important;
+}
+
+.sub-heading {
+    .align-center {
+        text-align: center;
+    }
+    font-size: rem-calc(18px);
+    color: $secondary-text-color;
+}
+
+ul, ol, dd {
+    margin-left: 2rem;
+}
+//Margin
+.v-large,
+.v-large-top {
+    margin-top: $largeSpace;
+}
+.v-large,
+.v-large-bottom {
+    margin-bottom: $largeSpace;
+}
+.v-normal,
+.v-normal-top {
+    margin-top: $mediumSpace;
+}
+.v-normal,
+.v-normal-bottom {
+    margin-bottom: $mediumSpace;
+}
+.v-small,
+.v-small-top {
+    margin-top: $smallSpace;
+}
+.v-small,
+.v-small-bottom {
+    margin-bottom: $smallSpace;
+}
+.v-xsmall,
+.v-xsmall-top {
+    margin-top: $xsmallSpace;
+}
+.v-xsmall,
+.v-xsmall-bottom {
+    margin-bottom: $xsmallSpace;
+}
+.text-center {
+  text-align: center;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.h-no-margin {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.v-no-margin {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+//Padding
+.padding-xsmall {
+    padding: $xsmallSpace;
+}
+.padding-small {
+    padding: $smallSpace;
+}
+.padding-normal {
+    padding: $normalSpace;
+}
+.padding-medium {
+    padding: $mediumSpace;
+}
+.padding-large {
+    padding: $largeSpace;
+}
+.no-padding {
+    padding: 0px;
+}
+
+//Float Alignment
+.align-left {
+    float: left;
+}
+.align-right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.primary-text {
+    font-size: $normal-font-size;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 500;
+}
+.large {
+    font-size: $large-font-size
+}
+.small {
+    font-size: $small-font-size;
+}
+.secondary-text {
+    font-size: $small-font-size;
+    font-weight: 400;
+    line-height: rem-calc(18);
+    color: $secondary-text-color;
+}
+.highlight-text {
+    color: $brand-color;
+}
+.align-center {
+    text-align: center;
+}
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/************** Grommet custom ***********/
+.page-wrapper {
+	padding-bottom: 70px;
+}
+.ps-button {
+    &.grommetux-button:not(.grommetux-button--box) {
+        font-size:$normal-font-size;
+        font-weight: 400;
+        border-radius: 0px;
+        padding: rem-calc(8px) rem-calc(22px);
+        border: none;
+        &.hover-effect:hover {
+            background-color: $brand-dim-color;
+            transition: background 1s ease;
+        }
+        @include breakpoint(small down) {
+            &.responsive-small {
+                font-size:$small-font-size;
+                padding: rem-calc(1px) rem-calc(12px);
+                min-width: rem-calc(75px);
+            }
+        }
+        &.small {
+            padding: rem-calc(1px) rem-calc(12px);
+            min-width: rem-calc(75px);
+        }
+        &.medium {
+            padding: rem-calc(4px) rem-calc(12px);
+            min-width: rem-calc(75px);
+        }
+        @include breakpoint(small down) {
+            &.responsive-small {
+                font-size:$small-font-size;
+                padding: rem-calc(0px) rem-calc(12px);
+                min-width: rem-calc(75px);
+            }
+            &.responsive-medium {
+                padding: rem-calc(4px) rem-calc(12px);
+                min-width: rem-calc(75px);
+            }
+        }
+        &.hollow {
+            border: $border-brand;
+            color: $brand-color;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        &.icon-only {
+            padding: 0;
+            &.small {
+                padding: 0;
+                min-width: rem-calc(20px);
+            }
+        }
+    }
+}
+.grommet {    
+    @include breakpoint(small down) {
+        H1:not(.grommetux-heading) {
+            font-size: rem-calc(24px);
+            line-height: rem-calc(24px);
+        }
+        H2:not(.grommetux-heading) {
+            font-size: rem-calc(20px);
+            line-height: rem-calc(20px);
+        }
+        H3:not(.grommetux-heading) {
+            font-size: rem-calc(18px);
+            line-height: rem-calc(20px);
+        }
+    }
+    .grommetux-button__icon {
+        .grommetux-control-icon {
+            vertical-align: top;
+        }
+    }
+    .grommetux-control-icon {
+        &.white-icon {
+            fill: #fff;
+            stroke: #fff;
+        }
+        &.xsmall {
+            width: $xsmallIcon;
+            height: $xsmallIcon;
+        }
+        &.small {
+            width: $smallIcon;
+            height: $smallIcon;
+        }
+        &.medium {
+            width: $mediumIcon;
+            height: $mediumIcon;
+        }    
+        &.normal {
+            width: $normalIcon;
+            height: $normalIcon;
+        }    
+        &.large {
+            width: $largeIcon;
+            height: $largeIcon;
+        }
+        &.xlarge {
+            width: $xLargeIcon;
+            height: $xLargeIcon;
+        }
+    }   
+    .ps-form {
+        FORM {
+            margin: $smallSpace 0;
+            FIELDSET {
+                border: none;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            .grommetux-form-field {
+                margin-bottom: -1px;
+                padding: rem-calc(6px) rem-calc(12px);
+                input:not(.grommetux-input), .grommetux-form-field select,
+                .grommetux-form-field textarea {
+                    outline: none;
+                }
+                .grommetux-form-field__label {
+                    line-height: 18px;
+                    color: #999;
+                }
+                .grommetux-form-field__contents {
+                    margin-left: -12px;
+                    margin-right: -12px;
+                    >input:not([type]), >input[type=text], >input[type=range], 
+                    >input[type=email], >input[type=tel], >input[type=url], 
+                    >input[type=password], >input[type=number], >input[type=file], 
+                    >input[type=color], >select, >.grommetux-search-input input, 
+                    >.grommetux-calendar input, >.grommetux-date-time input, 
+                    >.grommetux-text-input, >.grommetux-select:not(.grommetux-select--inline) input, 
+                    >.grommetux-password-input input {
+                        height: 36px;
+                    }
+                    > input[type=text]:focus, > input[type=email]:focus, 
+                    > input[type=password]:focus, > input[type=number]:focus, 
+                    > input[type=file]:focus, > input[type=color]:focus, 
+                    > select:focus, > textarea:focus {
+                        padding: 0 12px;
+                    }
+                    > input[type=text], > input[type=email], 
+                    > input[type=password], > input[type=number],
+                    > input[type=file], > input[type=color], 
+                    > select, > textarea {
+                        padding: 0 12px;
+                    }
+                }
+                .grommetux-form-field__error {
+                    line-height: 1;
+                }
+            }
+            .grommetux-form fieldset {
+                > .grommetux-form-fields .grommetux-form-field {
+                    width: 100%;
+                }
+                > *:not(.grommetux-form-field) + .grommetux-form-field {
+                    margin-top: 0px;
+                }
+            }
+            .grommetux-form-field__error {
+                font-size: $xsmall-font-size;
+            }
+        }
+    }
+    
+    LI:not([class^="grommetux-"]) {
+        font-weight: 400;
+        color: $text-color;
+    }
+    
+    .ps-tabs {
+        &.grommetux-tabs {
+            .grommetux-tab__label {
+                font-size: $normal-font-size;
+            }
+            .grommetux-tab--active {
+                .grommetux-tab__label {
+                    border-color: $brand-color;
+                }
+            }
+            LI.grommetux-tab {
+                padding-bottom: 0 !important;
+            }
+            BUTTON.grommetux-tab__button {
+                border: 0;
+            }
+        }
+
+
+    }
+
+    .grommetux-anchor {
+        &.grommetux-anchor--icon-label {
+            font-weight: 400;
+            font-size: $normal-font-size;
+        }
+    }
+
+    .grommetux-radio-button {
+        &.small {
+            .grommetux-radio-button__control {
+                width: 16px;
+                height: 16px;
+            }    
+            .grommetux-radio-button__input:checked + .grommetux-radio-button__control:after {
+                top: 3px;
+                left: 3px;
+                width: 6px;
+                height: 6px;
+            }
+        }
+    }
+    
+}
+/************** Grommet custom end ***********/
+
+.custom-scroll-bar {
+    &::-webkit-scrollbar-track
+    {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 7px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: #bbb;
+    }
+    &:hover,
+    &:focus {
+        visibility: visible;
+    }
+}
+.section {
+    background: #fff;
+    margin: $smallSpace;
+    border-radius: 4px;
+    padding: $smallSpace;
+    
+    @include breakpoint(small down) {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
