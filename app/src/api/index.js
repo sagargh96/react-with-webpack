@@ -8,9 +8,9 @@ let axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
     config => {
-        if (localStorage.getItem("authToken")) {
-            config.headers.Authorization = 'Bearer ' + localStorage.getItem("authToken");
-        }
+        // if (localStorage.getItem("authToken")) {
+        //     config.headers.Authorization = 'Bearer ' + localStorage.getItem("authToken");
+        // }
         return config;
     }
 );

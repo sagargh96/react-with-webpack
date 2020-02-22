@@ -1,0 +1,30 @@
+{
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "moduleFileExtensions": [
+        "js", "json", "jsx"
+    ],
+    "moduleNameMapper": {
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+        "^.+\\.module\\.{css,sass,scss}$": "identity-obj-proxy",
+        "alias": {
+            "components": "<rootDir>/app/src/components",
+            "containers": "<rootDir>/app/src/containers",
+            "pages": "<rootDir>/app/src/pages",
+            "styles": "<rootDir>/app/styles",
+            "images": "<rootDir>/app/images",
+            "utils": "<rootDir>/app/src/utils",
+            "api": "<rootDir>/app/src/api",
+            "react": ["<rootDir>/node_modules", "react"],
+            "react-dom": ["<rootDir>/node_modules", "react-dom"]
+        }
+      },
+    "transformIgnorePatterns": [
+        "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$",
+        "^.+\\.module\\.{css,sass,scss}$"
+    ],
+    "testMatch": ["**/__tests__/**/*.js?(x)"],
+    "testPathIgnorePatterns": ["\\\\node_modules\\\\", "<rootDir>/app/styles"]
+    
+}

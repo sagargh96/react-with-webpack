@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 
-/*style*/ import './Alert.module.scss'
+/*style*/ 
+import './Alert.module.scss';
 
 class Alert extends Component {
     constructor () {
