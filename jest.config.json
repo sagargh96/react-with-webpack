@@ -6,18 +6,19 @@
         "js", "json", "jsx"
     ],
     "moduleNameMapper": {
-        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-        "^.+\\.module\\.{css,sass,scss}$": "identity-obj-proxy",
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/app/__mocks__/fileMock.js",
+        "\\.(css|sass|scss)$": "<rootDir>/app/__mocks__/styleMock.js",
         "alias": {
-            "components": "<rootDir>/app/src/components",
-            "containers": "<rootDir>/app/src/containers",
-            "pages": "<rootDir>/app/src/pages",
-            "styles": "<rootDir>/app/styles",
-            "images": "<rootDir>/app/images",
-            "utils": "<rootDir>/app/src/utils",
-            "api": "<rootDir>/app/src/api",
-            "react": ["<rootDir>/node_modules", "react"],
-            "react-dom": ["<rootDir>/node_modules", "react-dom"]
+            "@(.*)$": "<rootDir>/app/$1",
+            "components(.*)$": "<rootDir>/app/src/components",
+            "containers(.*)$": "<rootDir>/app/src/containers",
+            "pages(.*)$": "<rootDir>/app/src/pages",
+            "styles(.*)$": "<rootDir>/app/styles",
+            "images(.*)$": "<rootDir>/app/images",
+            "utils(.*)$": "<rootDir>/app/src/utils",
+            "api(.*)$": "<rootDir>/app/src/api",
+            "react(.*)$": ["<rootDir>/node_modules", "react"],
+            "react-dom(.*)$": ["<rootDir>/node_modules", "react-dom"]
         }
       },
     "transformIgnorePatterns": [

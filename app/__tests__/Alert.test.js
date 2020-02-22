@@ -22,6 +22,8 @@ describe("Alert component test suite", () => {
         const component = shallow(<Alert type={props.type} text={props.text} />);
         console.log(component);
         const text = component.find('span').text();
+        const text1 = component.find('div');
+        console.log("div---->", text1);
         expect(text).toEqual('sagar');
         // expect(component).toMatchSnapshot();
 
