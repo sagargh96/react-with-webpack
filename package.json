@@ -60,7 +60,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "classnames": "^2.2.5",
     "d": "^1.0.1",
